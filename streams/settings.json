@@ -1,0 +1,30 @@
+{
+    "config": {
+        "source": {
+            "type": "file"
+        }
+    },
+    "fields": [
+        {
+            "handle": "id",
+            "type": "slug",
+            "required": true,
+            "unique": true,
+            "config": {
+                "default": "default"
+            }
+        },
+        {
+            "handle": "values",
+            "type": "object"
+        }
+    ],
+    "ui": {
+        "cp": {
+            "section": {
+                "sort_order": 98,
+                "buttons": [{ "handle": "create" }]
+            }
+        }
+    }
+}

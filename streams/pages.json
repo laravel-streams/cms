@@ -1,0 +1,116 @@
+{
+    "handle": "pages",
+    "config": {
+        "source": {
+            "format": "md"
+        },
+        "key_name": "handle"
+    },
+    "fields": [
+        {
+            "handle": "str_id",
+            "type": "uuid",
+            "required": true,
+            "unique": true,
+            "config": {
+                "default": true
+            }
+        },
+        {
+            "handle": "title",
+            "type": "string",
+            "translatable": true,
+            "required": true
+        },
+        {
+            "handle": "handle",
+            "type": "string",
+            "translatable": true,
+            "required": true,
+            "unique": true
+        },
+        {
+            "handle": "path",
+            "string": "path",
+            "required": true
+        },
+        {
+            "handle": "parent",
+            "type": "relationship",
+            "config": {
+                "related": "pages"
+            }
+        },
+        {
+            "handle": "status",
+            "type": "select",
+            "config": {
+                "options": ["enabled", "disabled"]
+            }
+        },
+        {
+            "handle": "meta_title",
+            "translatable": true,
+            "type": "string"
+        },
+        {
+            "handle": "meta_description",
+            "translatable": true,
+            "type": "string"
+        },
+        {
+            "handle": "theme_layout",
+            "type": "string"
+        },
+        {
+            "handle": "allowed_roles",
+            "type": "array"
+        },
+        {
+            "handle": "body",
+            "type": "markdown"
+        }
+    ],
+    "ui": {
+        "tables": [
+            {
+                "handle": "default",
+                "columns": [{ "handle": "title" }, { "handle": "handle" }],
+                "buttons": [
+                    {
+                        "handle": "edit",
+                        "attributes": {
+                            "href": "/cp/pages/{entry.handle}/edit"
+                        }
+                    },
+                    {
+                        "handle": "view",
+                        "attributes": {
+                            "href": "{entry.path}",
+                            "target": "_blank"
+                        }
+                    }
+                ]
+            }
+        ],
+        "forms": [
+            {
+                "handle": "default",
+                "buttons": [
+                    {
+                        "handle": "view",
+                        "attributes": {
+                            "href": "{entry.path}",
+                            "target": "_blank"
+                        }
+                    }
+                ]
+            }
+        ],
+        "cp": {
+            "section": {
+                "buttons": [{ "handle": "create" }]
+            }
+        }
+    }
+}

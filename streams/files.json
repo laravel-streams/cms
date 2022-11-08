@@ -1,0 +1,104 @@
+{
+    "extends": "core.filesystem",
+
+    "fields": [
+        {
+            "handle": "name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "disk",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "folder",
+            "type": "relationship",
+            "required": true,
+            "config": {
+                "related": "folders"
+            }
+        },
+        {
+            "handle": "extension",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "size",
+            "type": "integer",
+            "required": true
+        },
+        {
+            "handle": "mime_type",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "entry",
+            "type": "object"
+        },
+        {
+            "handle": "keywords",
+            "type": "array",
+            "config": {
+                "items": [{ "type": "string" }]
+            }
+        },
+        {
+            "handle": "height",
+            "type": "integer"
+        },
+        {
+            "handle": "width",
+            "type": "integer"
+        }
+    ],
+    "ui": {
+        "cp": {
+            "section": {
+                "buttons": [
+                    {
+                        "handle": "sync",
+                        "attributes": { "href": "files/sync" }
+                    },
+                    { "handle": "create_folder" },
+                    { "handle": "upload_file" }
+                ]
+            }
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "table": "App\\Streams\\Ui\\FilesTable",
+                "filters": [
+                    {
+                        "handle": "path"
+                    }
+                ],
+                "columns": [
+                    {
+                        "handle": "path"
+                    }
+                ],
+                "buttons": [
+                    { "handle": "edit" },
+                    {
+                        "handle": "view",
+                        "attributes": {
+                            "href": "/storage{entry.path}",
+                            "target": "_blank"
+                        }
+                    }
+                ],
+                "config": {
+                    "order_by": [
+                        ["is_dir", "DESC"],
+                        ["path", "DESC"]
+                    ]
+                }
+            }
+        ]
+    }
+}

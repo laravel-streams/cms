@@ -1,0 +1,63 @@
+{
+    "name": "streams/cms",
+    "type": "streams-addon",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Thompson",
+            "email": "ryan@pyrocms.com"
+        }
+    ],
+    "require": {
+        "streams/core": "^2.0",
+        "streams/ui": "^1.0"
+    },
+    "require-dev": {
+        "streams/testing": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../streams-testing",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../streams-core",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../streams-ui",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Streams\\Cms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Streams\\Cms\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev",
+            "dev-develop": "1.1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Streams\\Cms\\CmsProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

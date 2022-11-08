@@ -1,0 +1,110 @@
+{
+    "config": {
+        "source": {
+            "type": "self"
+        }
+    },
+    "fields": [
+        {
+            "handle": "id",
+            "type": "uuid",
+            "required": true,
+            "unique": true,
+            "config": {
+                "default": true
+            }
+        },
+        {
+            "handle": "from",
+            "type": "string",
+            "unique": true,
+            "required": true
+        },
+        {
+            "handle": "to",
+            "type": "string"
+        },
+        {
+            "handle": "status",
+            "required": true,
+            "config": {
+                "options": {
+                    "301": "301 Permenant",
+                    "302": "302 Temporary"
+                }
+            }
+        },
+        {
+            "handle": "secure",
+            "type": "boolean"
+        }
+    ],
+    "ui": {
+        "cp": {
+            "section": {
+                "buttons": [
+                    {
+                        "handle": "create"
+                    }
+                ]
+            }
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "columns": [
+                    {
+                        "handle": "from"
+                    },
+                    {
+                        "handle": "to"
+                    },
+                    {
+                        "handle": "status"
+                    }
+                ],
+                "buttons": [
+                    {
+                        "handle": "edit"
+                    },
+                    {
+                        "handle": "test",
+                        "attributes": {
+                            "target": "_blank",
+                            "href": "{entry.from}"
+                        }
+                    }
+                ]
+            }
+        ],
+        "forms": [
+            {
+                "handle": "default",
+                "buttons": [
+                    {
+                        "handle": "cancel",
+                        "attributes": {
+                            "href": "{cp.section}"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "data": [
+        {
+            "id": "d8454301-814a-4bf4-b667-b70d3823d520",
+            "from": "old-path",
+            "to": "new-path",
+            "status": "302",
+            "secure": null
+        },
+        {
+            "id": "33c52a31-49a5-4bf4-4798-92ed3023d2aa",
+            "from": "/",
+            "to": "about",
+            "status": "301",
+            "secure": null
+        }
+    ]
+}
