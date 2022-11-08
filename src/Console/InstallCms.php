@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanThompson\Cms\Console;
+namespace Streams\Cms\Console;
 
 use Illuminate\Console\Command;
 

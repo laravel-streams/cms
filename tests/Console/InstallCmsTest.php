@@ -1,8 +1,8 @@
 <?php
 
-namespace RyanThompson\Cms\Tests\Console;
+namespace Streams\Cms\Tests\Console;
 
-use RyanThompson\Cms\Tests\CmsTestCase;
+use Streams\Cms\Tests\CmsTestCase;
 
 class InstallCmsTest extends CmsTestCase
 {

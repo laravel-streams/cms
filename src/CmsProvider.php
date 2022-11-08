@@ -1,12 +1,12 @@
 <?php
 
-namespace RyanThompson\Cms;
+namespace Streams\Cms;
 
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Response;
 use Streams\Core\Support\Facades\Streams;
 
 class CmsProvider extends ServiceProvider
@@ -15,7 +15,7 @@ class CmsProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \RyanThompson\Cms\Console\InstallCms::class,
+                \Streams\Cms\Console\InstallCms::class,
             ]);
         }
     }
@@ -48,6 +48,7 @@ class CmsProvider extends ServiceProvider
 
     public function registerRedirects()
     {
+        return;
         if (!Streams::exists('redirects')) {
             Streams::load(__DIR__ . '/../streams/redirects.json');
         }

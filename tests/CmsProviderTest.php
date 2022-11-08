@@ -1,9 +1,9 @@
 <?php
 
-namespace RyanThompson\Cms\Tests;
+namespace Streams\Cms\Tests;
 
 use Streams\Core\Support\Facades\Streams;
-use RyanThompson\Cms\Tests\CmsTestCase;
+use Streams\Cms\Tests\CmsTestCase;
 
 class CmsProviderTest extends CmsTestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanThompson\Cms\Page;
+namespace Streams\Cms\Page;
 
 use Illuminate\Support\ServiceProvider;
 

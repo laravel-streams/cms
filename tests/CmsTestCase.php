@@ -1,10 +1,10 @@
 <?php
 
-namespace RyanThompson\Cms\Tests;
+namespace Streams\Cms\Tests;
 
 use Streams\Testing\TestCase;
 use Illuminate\Support\Facades\File;
-use RyanThompson\Cms\CmsProvider;
+use Streams\Cms\CmsProvider;
 
 abstract class CmsTestCase extends TestCase
 {
