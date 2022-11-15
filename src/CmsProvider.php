@@ -18,23 +18,24 @@ class CmsProvider extends ServiceProvider
                 \Streams\Cms\Console\InstallCms::class,
             ]);
         }
-    }
 
-    public function boot()
-    {
         $this->registerPages();
         $this->registerRedirects();
     }
 
+    public function boot()
+    {
+        //
+    }
+
     public function registerPages()
     {
-        if (!Streams::exists('pages')) {
-            Streams::load(__DIR__ . '/../streams/pages.json');
+        if (!Streams::exists('cms_pages')) {
+            Streams::load(__DIR__ . '/../streams/cms_pages.json');
         }
 
-        $pages = Streams::repository('pages')->all();
+        $pages = Streams::repository('cms_pages')->all();
 
-        // 1.) Route
         foreach ($pages as $page) {
             Route::get($page->path, function () use ($page) {
                 return Response::view($page->template, [
@@ -48,12 +49,11 @@ class CmsProvider extends ServiceProvider
 
     public function registerRedirects()
     {
-        return;
-        if (!Streams::exists('redirects')) {
-            Streams::load(__DIR__ . '/../streams/redirects.json');
+        if (!Streams::exists('cms_redirects')) {
+            Streams::load(__DIR__ . '/../streams/cms_redirects.json');
         }
 
-        $redirects = Streams::repository('redirects')->all();
+        $redirects = Streams::repository('cms_redirects')->all();
 
         // 1.) Route
         App::booted(function () use ($redirects) {

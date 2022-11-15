@@ -1,9 +1,4 @@
 {
-    "config": {
-        "source": {
-            "type": "self"
-        }
-    },
     "fields": [
         {
             "handle": "id",
@@ -30,7 +25,7 @@
             "config": {
                 "options": {
                     "301": "301 Permenant",
-                    "302": "302 Temporary"
+                    "302": "302 Temporary" 
                 }
             }
         },

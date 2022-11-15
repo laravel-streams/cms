@@ -1,11 +1,19 @@
 {
-    "handle": "pages",
     "config": {
         "source": {
             "format": "md"
         },
-        "key_name": "handle"
+        "key_name": "uri"
     },
+    "routes": [
+        {
+            "handle": "view",
+            "uri": "{uri}",
+            "view": "page",
+            "parse": true,
+            "defer": true
+        }
+    ],
     "fields": [
         {
             "handle": "str_id",
