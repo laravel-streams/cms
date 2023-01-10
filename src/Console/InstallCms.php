@@ -8,7 +8,7 @@ class InstallCms extends Command
 {
     protected $signature = 'install:cms';
 
-    protected $description = 'Install the Cms content management system.';
+    protected $description = 'Install the CMS.';
 
     public function handle()
     {

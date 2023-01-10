@@ -28,13 +28,19 @@ class CmsProvider extends ServiceProvider
         //
     }
 
-    public function registerPages()
+    public function registerPages(): void
     {
-        if (!Streams::exists('cms_pages')) {
-            Streams::load(__DIR__ . '/../streams/cms_pages.json');
+        $pages = 'streams/pages.json';
+
+        $this->publishes([
+            __DIR__ . '/../' . $pages => base_path($pages),
+        ], ['cms', 'pages']);
+
+        if (!Streams::exists('pages')) {
+            return;
         }
 
-        $pages = Streams::repository('cms_pages')->all();
+        $pages = Streams::repository('pages')->all();
 
         foreach ($pages as $page) {
             Route::get($page->path, function () use ($page) {
@@ -47,13 +53,19 @@ class CmsProvider extends ServiceProvider
         }
     }
 
-    public function registerRedirects()
+    public function registerRedirects(): void
     {
-        if (!Streams::exists('cms_redirects')) {
-            Streams::load(__DIR__ . '/../streams/cms_redirects.json');
+        $redirects = 'streams/redirects.json';
+
+        $this->publishes([
+            __DIR__ . '/../' . $redirects => base_path($redirects),
+        ], ['cms', 'redirects']);
+
+        if (!Streams::exists('redirects')) {
+            return;
         }
 
-        $redirects = Streams::repository('cms_redirects')->all();
+        $redirects = Streams::repository('redirects')->all();
 
         // 1.) Route
         App::booted(function () use ($redirects) {

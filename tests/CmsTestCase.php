@@ -17,7 +17,9 @@ abstract class CmsTestCase extends TestCase
     {
         parent::restoreStreamsData();
         
-        // 1.) Pages
+        /**
+         * Pages and page data.
+         */
         File::copy(
             __DIR__ . '/../streams/pages.json',
             base_path('streams/pages.json')
@@ -28,7 +30,9 @@ abstract class CmsTestCase extends TestCase
             base_path('streams/data/pages')
         );
 
-        // 2.) Redirects
+        /**
+         * Redirects and domains.
+         */
         File::copy(
             __DIR__ . '/../streams/redirects.json',
             base_path('streams/redirects.json')

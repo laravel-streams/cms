@@ -1,4 +1,7 @@
 {
+    "source": {
+        "format": "json"
+    },
     "fields": [
         {
             "handle": "id",
