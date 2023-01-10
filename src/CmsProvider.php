@@ -67,7 +67,6 @@ class CmsProvider extends ServiceProvider
 
         $redirects = Streams::repository('redirects')->all();
 
-        // 1.) Route
         App::booted(function () use ($redirects) {
             foreach ($redirects as $redirect) {
                 Route::redirect(
