@@ -1,0 +1,116 @@
+{
+    "config": {
+        "source": {
+            "type": "self"
+        },
+        "abstract": "App\\Models\\User"
+    },
+    "fields": [
+        {
+            "handle": "id",
+            "type": "uuid",
+            "required": true,
+            "unique": true,
+            "config": {
+                "default": true
+            }
+        },
+        {
+            "handle": "email",
+            "type": "email",
+            "required": true,
+            "unique": true
+        },
+        {
+            "handle": "password",
+            "type": "hash",
+            "required": true
+        },
+        {
+            "handle": "roles",
+            "type": "array",
+            "required": true
+        },
+        {
+            "handle": "display_name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "activated",
+            "type": "boolean"
+        },
+        {
+            "handle": "enabled",
+            "type": "boolean"
+        },
+        {
+            "handle": "last_login_at",
+            "type": "datetime"
+        },
+        {
+            "handle": "remember_token",
+            "type": "string"
+        },
+        {
+            "handle": "activation_code",
+            "type": "string"
+        },
+        {
+            "handle": "reset_code",
+            "type": "string"
+        },
+        {
+            "handle": "ip_address",
+            "type": "string"
+        }
+    ],
+    "ui": {
+        "tables": [
+            {
+                "handle": "default",
+                "columns": [
+                    {
+                        "handle": "display_name"
+                    },
+                    {
+                        "handle": "email"
+                    }
+                ],
+                "buttons": [
+                    {
+                        "handle": "edit"
+                    }
+                ]
+            }
+        ],
+        "cp": {
+            "section": {
+                "sort_order": 2,
+                "buttons": [
+                    {
+                        "handle": "create"
+                    }
+                ]
+            }
+        }
+    },
+    "data": {
+        "9e36c441-a8af-4562-96f6-6b12d27e4c93": {
+            "id": "9e36c441-a8af-4562-96f6-6b12d27e4c93",
+            "email": "ryan@pyrocms.com",
+            "display_name": "Ryan Thompson",
+            "password": "$2y$10$Br7ee8ZoLlI8PJkmb6kPyepFY3yUdla6MIa8If\/nHvjjD116byudG",
+            "roles": [
+                "[]"
+            ],
+            "activated": true,
+            "enabled": true,
+            "last_login_at": null,
+            "remember_token": null,
+            "activation_code": null,
+            "reset_code": null,
+            "ip_address": null
+        }
+    }
+}

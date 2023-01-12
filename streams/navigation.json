@@ -1,0 +1,92 @@
+{
+    "name": "Navigation",
+    "handle": "navigation",
+    "description": "Navigation for the website.",
+    "config": {
+        "source": {
+            "type": "self"
+        }
+    },
+    "routes": [],
+    "fields": [
+        {
+            "handle": "title",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "url",
+            "type": "string"
+        },
+        {
+            "handle": "target",
+            "type": "enum",
+            "required": true,
+            "config": {
+                "default": "_self",
+                "options": {
+                    "_blank": "New Tab",
+                    "_self": "Same Tab"
+                }
+            }
+        }
+    ],
+    "ui": {
+        "cp": {
+            "section": {
+                "sort_order": 5,
+                "buttons": [{ "handle": "create" }]
+            }
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "columns": [
+                    {"handle": "title"},
+                    {"handle": "url"}
+                ],
+                "buttons": [
+                    {
+                        "handle": "edit"
+                    },
+                    {
+                        "handle": "view",
+                        "attributes": {
+                            "target": "_blank",
+                            "href": "{entry.url}"
+                        }
+                    }
+                ]
+            }
+        ],
+        "forms": [
+            {
+                "handle": "default",
+                "buttons": [
+                    {
+                        "handle": "cancel",
+                        "class": "-secondary",
+                        "attributes": {
+                            "href": "{cp.section.url}"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "data": [
+        {
+            "title": "Docs",
+            "url": "https://streams.dev/",
+            "target": "_blank"
+        },
+        {
+            "title": "About",
+            "url": "/about"
+        },
+        {
+            "title": "Contact",
+            "url": "/contact"
+        }
+    ]
+}

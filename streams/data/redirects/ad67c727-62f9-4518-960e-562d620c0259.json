@@ -1,0 +1,6 @@
+{
+    "from": "redirect-me",
+    "to": "\/",
+    "status": "302",
+    "secure": null
+}

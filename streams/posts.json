@@ -1,0 +1,94 @@
+{
+    "config": {
+        "source": {
+            "format": "md"
+        }
+    },
+    "routes": [
+        {
+            "handle": "view",
+            "uri": "/post/{id}",
+            "view": "page",
+            "parse": true,
+            "defer": true
+        }
+    ],
+    "fields": [
+        {
+            "name": "ID",
+            "handle": "id",
+            "type": "slug",
+            "required": true,
+            "unique": true
+        },
+        {
+            "handle": "title",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "publish_at",
+            "type": "date",
+            "required": true
+        },
+        {
+            "handle": "meta_title",
+            "type": "string"
+        },
+        {
+            "handle": "meta_description",
+            "type": "string"
+        },
+        {
+            "handle": "body",
+            "type": "markdown"
+        }
+    ],
+    "ui": {
+        "cp": {
+            "section": {
+                "sort_order": 1,
+                "buttons": [{ "handle": "create" }]
+            }
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "columns": [
+                    { "handle": "title" },
+                    { "handle": "id" },
+                    { "handle": "path" }
+                ],
+                "buttons": [
+                    {
+                        "handle": "edit",
+                        "attributes": {
+                            "href": "/cp/pages/{entry.handle}/edit"
+                        }
+                    },
+                    {
+                        "handle": "view",
+                        "attributes": {
+                            "href": "{entry.path}",
+                            "target": "_blank"
+                        }
+                    }
+                ]
+            }
+        ],
+        "forms": [
+            {
+                "handle": "default",
+                "buttons": [
+                    {
+                        "handle": "view",
+                        "attributes": {
+                            "href": "{entry.path}",
+                            "target": "_blank"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
