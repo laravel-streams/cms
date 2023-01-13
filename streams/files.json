@@ -41,8 +41,7 @@
         },
         {
             "handle": "is_dir",
-            "type": "boolean",
-            "required": true
+            "type": "boolean"
         },
         {
             "handle": "disk",

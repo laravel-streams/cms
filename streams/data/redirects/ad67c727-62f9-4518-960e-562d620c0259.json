@@ -1,6 +1,6 @@
 {
     "from": "redirect-me",
     "to": "\/",
-    "status": "302",
+    "status": "301",
     "secure": null
 }

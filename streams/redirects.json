@@ -2,6 +2,16 @@
     "source": {
         "format": "json"
     },
+    "routes": [
+        {
+            "handle": "redirect",
+            "uri": "{from}",
+            "redirect": "{to}",
+            "status_code": "{status}",
+            "parse": true,
+            "defer": true
+        }
+    ],
     "fields": [
         {
             "handle": "id",
