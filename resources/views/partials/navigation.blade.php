@@ -2,7 +2,7 @@
     <ul class="list-reset lg:flex justify-end flex-1 items-center">
         @foreach (Streams::navigation()->get() as $item)
         <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-gray-900 {{ Request::url() == URL::to($item->url) ? 'font-bold' : null }} no-underline" href="{{ $item->url }}">{{ $item->title }}</a>
+            <a class="inline-block py-2 px-4 text-gray-900 {{ Request::url() == URL::to($item->url) ? 'font-bold' : null }} no-underline hover:underline" href="{{ $item->url }}" target="{{ $item->target ?: '_self' }}">{{ $item->title }}</a>
         </li>    
         @endforeach
     </ul>

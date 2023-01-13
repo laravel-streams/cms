@@ -1,12 +1,13 @@
 <nav id="header" class="fixed w-full z-10 top-0">
 
     <div id="progress" class="h-1 z-20 top-0"
-        style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+        style="background:linear-gradient(to right, #25BD4B var(--scroll), transparent 0);"></div>
 
     <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
 
         <div class="pl-4">
-            <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="/">
+            <a class="flex items-center text-gray-900 no-underline hover:underline font-extrabold text-xl" href="/">
+                <img class="w-12 opacity-70" src="{!! Assets::url('storage/logo.svg') !!}" alt="{{ config('app.name') }} Logo">
                 {{ config('app.name') }}
             </a>
         </div>

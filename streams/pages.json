@@ -7,7 +7,7 @@
     "routes": [
         {
             "handle": "view",
-            "uri": "{uri}",
+            "uri": "{path}",
             "view": "page",
             "parse": true,
             "defer": true

@@ -1,14 +1,14 @@
 {
     "config": {
         "source": {
-            "format": "md"
+            "format": "html"
         }
     },
     "routes": [
         {
             "handle": "view",
             "uri": "/post/{id}",
-            "view": "page",
+            "view": "post",
             "parse": true,
             "defer": true
         }
@@ -27,6 +27,20 @@
             "required": true
         },
         {
+            "handle": "author",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "author_text",
+            "type": "string"
+        },
+        {
+            "handle": "author_url",
+            "type": "url",
+            "required": true
+        },
+        {
             "handle": "publish_at",
             "type": "date",
             "required": true
@@ -40,8 +54,15 @@
             "type": "string"
         },
         {
+            "handle": "tags",
+            "type": "array"
+        },
+        {
             "handle": "body",
-            "type": "markdown"
+            "type": "string",
+            "input": {
+                "type": "textarea"
+            }
         }
     ],
     "ui": {

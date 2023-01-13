@@ -37,6 +37,9 @@
         }
     ],
     "ui": {
+        "cp": {
+            "section": []
+        },
         "tables": [
             {
                 "handle": "default",
@@ -66,11 +69,11 @@
     "data": {
         "default": {
             "id": "default",
-            "twitter_url": "https:\/\/github.com\/sponsors\/ryanthompson",
-            "discord_url": "https:\/\/github.com\/sponsors\/ryanthompson",
-            "github_url": "https:\/\/github.com\/laravel-streams/cms",
+            "twitter_url": "https:\/\/twitter.com\/laravel_streams",
+            "discord_url": "https:\/\/streams.dev\/discord",
+            "github_url": "https:\/\/github.com\/laravel-streams\/cms",
             "logo": "public::img\/logo.svg",
-            "about": "[Lorem ipsum](https://streams.dev/) dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia."
+            "about": "[Lorem ipsum](https:\/\/streams.dev\/) dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia."
         }
     }
 }
