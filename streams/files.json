@@ -1,0 +1,135 @@
+{
+    "name": "Files",
+    "handle": "files",
+    "description": "Basic filesystem cache.",
+    "config": {
+        "source": {
+            "format": "json"
+        }
+    },
+    "routes": [
+        {
+            "handle": "view",
+            "uri": "files",
+            "view": "files"
+        },
+        {
+            "handle": "view",
+            "uri": "files\/{id}",
+            "view": "file"
+        },
+        {
+            "handle": "render",
+            "uri": "file/{id}",
+            "uses": "App\\Http\\Controllers\\ViewFile"
+        }
+    ],
+    "fields": [
+        {
+            "handle": "id",
+            "type": "uuid",
+            "required": true,
+            "unique": true,
+            "config": {
+                "default": true
+            }
+        },
+        {
+            "handle": "path",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "is_dir",
+            "type": "boolean",
+            "required": true
+        },
+        {
+            "handle": "disk",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "handle": "size",
+            "type": "integer"
+        },
+        {
+            "handle": "mime_type",
+            "type": "string"
+        },
+        {
+            "handle": "visibility",
+            "type": "string"
+        },
+        {
+            "handle": "last_modified",
+            "type": "datetime"
+        },
+        {
+            "handle": "extension",
+            "type": "string"
+        }
+    ],
+    "ui": {
+        "cp": {
+            "section": {
+                "handle": "files"
+            }
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "columns": [
+                    {
+                        "handle": "path"
+                    }
+                ],
+                "buttons": [
+                    {
+                        "handle": "edit"
+                    },
+                    {
+                        "handle": "data",
+                        "attributes": {
+                            "href": "/files/{entry.id}",
+                            "target": "_blank",
+                            "class": ["a-button", "-secondary"]
+                        }
+                    },
+                    {
+                        "handle": "render",
+                        "attributes": {
+                            "href": "/file/{entry.id}",
+                            "target": "_blank",
+                            "class": ["a-button", "-secondary"]
+                        }
+                    }
+                ],
+                "config": {
+                    "order_by": [
+                        ["path", "asc"]
+                    ]
+                }
+            }
+        ],
+        "forms": [
+            {
+                "handle": "default",
+                "buttons": [
+                    {
+                        "handle": "cancel",
+                        "class": "-secondary",
+                        "attributes": {
+                            "href": "{cp.section.url}"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

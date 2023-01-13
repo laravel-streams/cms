@@ -98,10 +98,12 @@
 
 		<!--Author-->
 		<div class="flex w-full items-center font-sans px-4 py-12">
-			<img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+			<img class="w-10 h-10 rounded-full mr-4" src="{{ URL::asset('storage/me2.jpeg') }}" alt="Ryan Thompson">
 			<div class="flex-1 px-2">
-				<p class="text-base font-bold text-base md:text-xl leading-none mb-2">Jo Bloggerson</p>
-				<p class="text-gray-600 text-xs md:text-base">Minimal Blog Tailwind CSS template by <a class="text-green-500 no-underline hover:underline" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+				<p class="text-base font-bold text-base md:text-xl leading-none mb-2">
+					Ryan Thompson
+				</p>
+				<p class="text-gray-600 text-xs md:text-base">Minimal Blog Example</p>
 			</div>
 			<div class="justify-end">
 				<button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</button>
@@ -130,41 +132,7 @@
 	</div>
 	<!--/container-->
 
-	<footer class="bg-white border-t border-gray-400 shadow">
-		<div class="container max-w-4xl mx-auto flex py-8">
-
-			<div class="w-full mx-auto flex flex-wrap">
-				<div class="flex w-full md:w-1/2 ">
-					<div class="px-8">
-						<h3 class="font-bold text-gray-900">About</h3>
-						<p class="py-4 text-gray-600 text-sm">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-						</p>
-					</div>
-				</div>
-
-				<div class="flex w-full md:w-1/2">
-					<div class="px-8">
-						<h3 class="font-bold text-gray-900">Social</h3>
-						<ul class="list-reset items-center text-sm pt-3">
-							<li>
-								<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
-							</li>
-							<li>
-								<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
-							</li>
-							<li>
-								<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-
-
-		</div>
-	</footer>
+	@include('partials.footer')
 
 	<script>
 		/* Progress bar */

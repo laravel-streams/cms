@@ -12,5 +12,5 @@
 @vite(['resources/js/app.js'])
 
 @php
-$variables = Streams::repository('variables')->find('default');
+View::share('variables', Streams::repository('variables')->find('default'));
 @endphp
