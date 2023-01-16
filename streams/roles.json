@@ -38,10 +38,8 @@
         "tables": [
             {
                 "handle": "default",
-                "columns": [
-                    { "handle": "name" },
-                    { "handle": "description" }
-                ]
+                "columns": [{ "handle": "name" }, { "handle": "description" }],
+                "buttons": [{ "handle": "edit" }]
             }
         ]
     },

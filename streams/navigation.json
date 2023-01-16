@@ -35,15 +35,23 @@
         "cp": {
             "section": {
                 "sort_order": 5,
-                "buttons": [{ "handle": "create" }]
+                "buttons": [
+                    {
+                        "handle": "create"
+                    }
+                ]
             }
         },
         "tables": [
             {
                 "handle": "default",
                 "columns": [
-                    {"handle": "title"},
-                    {"handle": "url"}
+                    {
+                        "handle": "title"
+                    },
+                    {
+                        "handle": "url"
+                    }
                 ],
                 "buttons": [
                     {
@@ -76,17 +84,21 @@
     },
     "data": [
         {
+            "id": 0,
             "title": "Docs",
-            "url": "https://streams.dev/",
+            "url": "https:\/\/streams.dev\/",
             "target": "_blank"
         },
         {
+            "id": 1,
             "title": "About",
-            "url": "/about"
+            "url": "\/about",
+            "target": "_self"
         },
         {
+            "id": 2,
             "title": "Contact",
-            "url": "/contact"
+            "url": "\/contact"
         }
     ]
 }
