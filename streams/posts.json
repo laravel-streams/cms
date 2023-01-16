@@ -61,7 +61,7 @@
             "handle": "body",
             "type": "string",
             "input": {
-                "type": "textarea"
+                "type": "editor"
             }
         }
     ],
@@ -82,10 +82,7 @@
                 ],
                 "buttons": [
                     {
-                        "handle": "edit",
-                        "attributes": {
-                            "href": "/cp/pages/{entry.handle}/edit"
-                        }
+                        "handle": "edit"
                     },
                     {
                         "handle": "view",

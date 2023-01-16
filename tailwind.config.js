@@ -5,6 +5,7 @@ module.exports = {
     enabled: false,
     content: [
       './storage/framework/views/*.php',
+      './streams/data/pages/*.html',
       './resources/**/*.blade.php',
       './docs/*.md',
     ],
@@ -12,11 +13,6 @@ module.exports = {
       whitelist: [],
     }
   },
-  content: [
-    './storage/framework/views/*.php',
-    './resources/**/*.blade.php',
-    './docs/*.md',
-  ],
   theme: {
     extend: {},
   },

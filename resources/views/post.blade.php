@@ -11,7 +11,7 @@
 
 	<div class="container w-full md:max-w-3xl mx-auto pt-20">
 
-		<article class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+		<article class="wysiwyg-content w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
 
 			<!--Title-->
 			<div class="font-sans">
@@ -28,19 +28,9 @@
 
 		</article>
 
-		<!--Tags -->
-		<div class="text-base md:text-sm text-gray-500 px-4 py-6">
-			@if ($entry->tags)
-			Tags: 
-			@foreach ($entry->tags as $tag)
-			<a href="#{{ $tag }}" class="text-base md:text-sm text-green-500 no-underline hover:underline">{{ $tag }}</a>{{ $loop->last ? '' : ','}}
-			@endforeach
-			@endif
-			
-		</div>
+		@include('partials.tags')
 
-		<!--Divider-->
-		<hr class="border-b-2 border-gray-400 mx-4">
+		@include('partials.divider')
 
 		<!--Author-->
 		<div class="flex w-full items-center font-sans px-4 py-8">
@@ -63,8 +53,7 @@
 
 		@include('partials.subscribe')
 
-		<!--Divider-->
-		{{-- <hr class="border-b-2 border-gray-400 mb-8 mx-4"> --}}
+		{{-- @include('partials.divider') --}}
 
 		<!--Next & Prev Links-->
 		{{-- <div class="font-sans flex justify-between content-center px-4 pb-12">

@@ -5,3 +5,22 @@
 * {
     font-size: 18px;
 }
+
+.wysiwyg-content {
+
+    h1, h2 ,h3, h4, h5, h6 {
+        @apply font-bold py-2 font-sans;
+    }
+
+    p {
+        @apply py-1;
+    }
+
+    li {
+        @apply py-3;
+    }
+
+    blockquote {
+        @apply border-l-4 border-green-500 italic my-8 pl-8 md:pl-12;
+    }
+}
