@@ -16,7 +16,8 @@
         },
         {
             "handle": "url",
-            "type": "string"
+            "type": "string",
+            "required": true
         },
         {
             "handle": "target",

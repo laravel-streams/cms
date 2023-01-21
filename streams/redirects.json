@@ -30,10 +30,12 @@
         },
         {
             "handle": "to",
-            "type": "string"
+            "type": "string",
+            "required": true
         },
         {
             "handle": "status",
+            "type": "enum",
             "required": true,
             "config": {
                 "options": {

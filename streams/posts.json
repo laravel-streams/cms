@@ -51,7 +51,10 @@
         },
         {
             "handle": "meta_description",
-            "type": "string"
+            "type": "string",
+            "input": {
+                "type": "textarea"
+            }
         },
         {
             "handle": "tags",

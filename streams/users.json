@@ -27,11 +27,6 @@
             "required": true
         },
         {
-            "handle": "roles",
-            "type": "array",
-            "required": true
-        },
-        {
             "handle": "display_name",
             "type": "string",
             "required": true
@@ -101,9 +96,6 @@
             "email": "ryan@pyrocms.com",
             "display_name": "Ryan Thompson",
             "password": "$2y$10$Br7ee8ZoLlI8PJkmb6kPyepFY3yUdla6MIa8If\/nHvjjD116byudG",
-            "roles": [
-                "[]"
-            ],
             "activated": true,
             "enabled": true,
             "last_login_at": null,

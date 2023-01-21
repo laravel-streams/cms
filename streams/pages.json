@@ -32,13 +32,6 @@
             "required": true
         },
         {
-            "handle": "parent",
-            "type": "relationship",
-            "config": {
-                "related": "pages"
-            }
-        },
-        {
             "handle": "meta_title",
             "type": "string"
         },
@@ -68,10 +61,7 @@
                 ],
                 "buttons": [
                     {
-                        "handle": "edit",
-                        "attributes": {
-                            "href": "/cp/pages/{entry.handle}/edit"
-                        }
+                        "handle": "edit"
                     },
                     {
                         "handle": "view",

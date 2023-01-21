@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
+@php
+View::share('metaTitle', $entry->meta_title ?: $entry->title);
+@endphp
+
 <head>
 	@include('partials.head')
 </head>
@@ -11,7 +15,8 @@
 
 	<div class="container w-full md:max-w-3xl mx-auto pt-20">
 
-		<article class="wysiwyg-content w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+		<article class="wysiwyg-content w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
+			style="font-family:Georgia,serif;">
 
 			<!--Title-->
 			<div class="font-sans">
@@ -20,11 +25,15 @@
 						class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO
 						BLOG</a>
 				</p>
-				<h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">{{ $entry->title }}</h1>
-				<p class="text-sm md:text-base font-normal text-gray-600">Published {{ $entry->publish_at->format('j F Y') }}</p>
+				<h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">{{
+					$entry->title }}</h1>
+				<p class="text-sm md:text-base font-normal text-gray-600">Published {{ $entry->publish_at->format('j F
+					Y') }}</p>
 			</div>
 
-			{!! $entry->body()->parse() !!}
+			<div class="wysiwyg-content">
+				{!! $entry->body()->parse() !!}
+			</div>
 
 		</article>
 
@@ -42,9 +51,7 @@
 				<p class="text-gray-600 text-xs md:text-base">{{ $entry->author_text }}</p>
 			</div>
 			<div class="justify-end">
-				<a
-					href="{{ $entry->author_url }}"
-					target="_blank"
+				<a href="{{ $entry->author_url }}" target="_blank"
 					class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read
 					More</a>
 			</div>

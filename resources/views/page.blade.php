@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
+@php
+View::share('metaTitle', $entry->meta_title ?: $entry->title);
+@endphp
+
 <head>
 	@include('partials.head')
 </head>
@@ -16,6 +20,8 @@
 				{!! View::parse(Str::markdown($entry->body)) !!}
 			</div>
 		</div>
+
+		@include('partials.subscribe')
 
 		<div class="mb-24"></div>
 
