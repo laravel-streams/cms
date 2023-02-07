@@ -4,6 +4,7 @@ module.exports = {
   purge: {
     enabled: false,
     content: [
+      './app/Components/*.php',
       './storage/framework/views/*.php',
       './streams/data/pages/*.html',
       './resources/**/*.blade.php',

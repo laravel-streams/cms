@@ -17,11 +17,11 @@ View::share('metaTitle', $entry->meta_title ?: $entry->title);
 
 		<div class="w-full px-4 md:px-6 text-gray-800" style="font-family:Georgia,serif;">
 			<div class="wysiwyg-content">
-				{!! View::parse(Str::markdown($entry->body)) !!}
+				{!! View::parse($entry->body) !!}
 			</div>
 		</div>
 
-		@include('partials.subscribe')
+		@ui('subscribe')
 
 		<div class="mb-24"></div>
 

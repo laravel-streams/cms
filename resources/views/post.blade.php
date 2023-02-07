@@ -58,7 +58,7 @@ View::share('metaTitle', $entry->meta_title ?: $entry->title);
 		</div>
 		<!--/Author-->
 
-		@include('partials.subscribe')
+		@ui('subscribe')
 
 		{{-- @include('partials.divider') --}}
 
