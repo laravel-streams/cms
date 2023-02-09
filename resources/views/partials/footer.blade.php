@@ -4,9 +4,9 @@
         <div class="w-full mx-auto flex flex-wrap">
             <div class="flex w-full md:w-1/2 ">
                 <div class="px-8">
-                    <p class="mt-2 wysiwyg-content">
+                    <div class="mt-2 wysiwyg-content">
                         {!! $variables->footer()->parse() !!}
-                    </p>
+                    </div>
                 </div>
             </div>
 
