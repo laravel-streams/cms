@@ -8,21 +8,16 @@ tags:
     - laravel
     - streams
 meta_title: null
-meta_description: '👋 Welcome fellow Tailwind CSS and miminal monochrome blog fan. This starter template provides a starting point to create your own minimal monochrome blog using Tailwind CSS and vanilla Javascript.'
+meta_description: '👋 Welcome!'
 ---
 
 <p>
-    👋 Welcome fellow <a href="https://www.tailwindcss.com">Tailwind CSS</a>
-    and miminal monochrome blog fan. This starter template provides a starting
-    point to create your own minimal monochrome blog using Tailwind CSS and
-    vanilla Javascript.
+    👋 Welcome! This starter template provides a starting
+    point to create your own website or blog using Tailwind CSS, Alpine JS, Laravel, and Streams.
 </p>
 
 <p>
-    The basic blog page layout is available and all using the default Tailwind
-    CSS classes (although there are a few hardcoded style tags). If you are
-    going to use this in your project, you will want to convert the classes into
-    components.
+    Introduction and readme stuff.
 </p>
 
 <h1>Heading 1</h1>

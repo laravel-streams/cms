@@ -1,0 +1,20 @@
+---
+title: Contact
+path: contact
+parent: null
+meta_title: null
+meta_description: null
+---
+
+<div class="flex items-center">
+    <div class="w-1/2">
+        @ui('contact-form')
+    </div>
+    <div class="w-1/2">
+        <ul>
+            <li><strong>Phone: </strong> {!! $variables->phone()->tel() !!}</li>
+            <li><strong>Email: </strong> {!! $variables->email()->mailto() !!}</li>
+            <li><strong>Address: </strong> {{ implode(', ', $variables->address()->lines()) }}</li>
+        </ul>
+    </div>
+</div>

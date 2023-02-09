@@ -1,0 +1,14 @@
+---
+title: Posts
+path: posts
+meta_title: null
+meta_description: null
+---
+
+<h1>Recent Posts</h1>
+
+<ul>
+    @foreach (Streams::posts()->orderBy('publish_at')->get() as $post)
+    <li>- <a class="hover:underline" href="/post/{{ $post->id }}">{{ $post->title }}</a></li>
+    @endforeach
+</ul>

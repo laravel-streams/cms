@@ -87,13 +87,13 @@
         {
             "id": 0,
             "title": "Docs",
-            "url": "https:\/\/streams.dev\/",
+            "url": "https:\/\/streams.dev\/docs",
             "target": "_blank"
         },
         {
             "id": 1,
-            "title": "About",
-            "url": "\/about",
+            "title": "Blog",
+            "url": "\/posts",
             "target": "_self"
         },
         {

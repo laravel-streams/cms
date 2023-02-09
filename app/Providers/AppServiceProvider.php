@@ -24,7 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        UI::register('subscribe', \App\Components\Subscribe::class);
         UI::register('contact-form', \App\Components\ContactForm::class);
     }
 }

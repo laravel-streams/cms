@@ -32,8 +32,23 @@
             "type": "url"
         },
         {
-            "handle": "about",
+            "handle": "footer",
             "type": "markdown"
+        },
+        {
+            "handle": "phone",
+            "type": "string"
+        },
+        {
+            "handle": "email",
+            "type": "email"
+        },
+        {
+            "handle": "address",
+            "type": "string",
+            "input": {
+                "type": "textarea"
+            }
         }
     ],
     "ui": {
@@ -73,7 +88,10 @@
             "discord_url": "https:\/\/streams.dev\/discord",
             "github_url": "https:\/\/github.com\/laravel-streams\/cms",
             "logo": "public::img\/logo.svg",
-            "about": "[Lorem ipsum](https:\/\/streams.dev\/) dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia."
+            "footer": "#### About\n\n[Lorem ipsum](https:\/\/streams.dev\/) dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.",
+            "phone": "+1 555 555 5555",
+            "email": "example@email.com",
+            "address": "1234 Example Street\nExample, CA 12345"
         }
     }
 }

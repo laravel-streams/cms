@@ -27,7 +27,7 @@ class ContactForm extends Form
                     name="name"
                     placeholder="Name"
                     value="{{ $component->name }}"
-                    class="border border-gray-400 rounded shadow-md p-3 text-gray-600"
+                    class="border p-2"
                     required>
 
                 <input
@@ -35,7 +35,7 @@ class ContactForm extends Form
                     name="email"
                     placeholder="Email"
                     value="{{ $component->email }}"
-                    class="border border-gray-400 rounded shadow-md p-3 text-gray-600"
+                    class="border p-2"
                     required>
 
                 @ui('textarea', [
@@ -44,11 +44,11 @@ class ContactForm extends Form
                     'value' => $component->message,
                     'required' => true,
                     'attributes' => [
-                        'class' => ['w-full border border-gray-400 rounded shadow-md p-3 text-gray-600'],
+                        'class' => ['w-full border p-2'],
                     ],
                 ])
 
-                <button type="submit" class="block bg-green-500 text-white text-base font-semibold py-3 rounded shadow hover:bg-green-600">Submit</button>
+                <button type="submit" class="block bg-black text-white text-base p-2">Submit</button>
             </form>
         </div>
     blade;
