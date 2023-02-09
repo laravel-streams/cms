@@ -38,7 +38,7 @@ class ContactForm extends Form
                     class="border p-2"
                     required>
 
-                @ui('textarea', [
+                @livewire('textarea', [
                     'name' => 'message',
                     'placeholder' => 'Message',
                     'value' => $component->message,
