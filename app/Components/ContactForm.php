@@ -2,8 +2,9 @@
 
 namespace App\Components;
 
+use App\Mail\ContactRequest;
 use Streams\Ui\Components\Form;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactForm extends Form
 {
@@ -19,7 +20,7 @@ class ContactForm extends Form
 
     public string $template = <<<'blade'
         <div>
-            <form ui:submit.prevent="submit" {!! $component->htmlAttributes([
+            <form wire:submit.prevent="submit" {!! $component->htmlAttributes([
                 'class' => ['flex mx-auto w-72 flex-col space-y-2'],
             ]) !!}>
                 <input
@@ -55,7 +56,6 @@ class ContactForm extends Form
 
     public function submit()
     {
-        // Send email
-        dd(Request::input());
+        Mail::to('ryan@pyrocms.com')->send(new ContactRequest);
     }
 }
