@@ -1,0 +1,1 @@
+{"version":3,"file":"resources/public/css/theme.css","mappings":"AAAA,OACI,wCACJ,CAEA,UACI,sBACJ,C","sources":["webpack://streams.ui/./resources/scss/theme.scss"],"sourcesContent":["body * {\n    font-size: calc(1rem * var(--ui-font-size));\n}\n\n[x-cloak] {\n    display: none !important;\n}\n"],"names":[],"sourceRoot":""}

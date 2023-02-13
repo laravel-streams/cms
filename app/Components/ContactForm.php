@@ -56,6 +56,6 @@ class ContactForm extends Form
 
     public function submit()
     {
-        Mail::to('ryan@pyrocms.com')->send(new ContactRequest);
+        // Mail the contact request.
     }
 }

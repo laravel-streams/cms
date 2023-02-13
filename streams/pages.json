@@ -19,7 +19,11 @@
             "handle": "id",
             "type": "slug",
             "required": true,
-            "unique": true
+            "unique": true,
+            "description": "The ID of the page. This is used to reference the page.",
+            "input": {
+                "placeholder": "my-page"
+            }
         },
         {
             "handle": "title",
@@ -29,7 +33,11 @@
         {
             "handle": "path",
             "string": "path",
-            "required": true
+            "required": true,
+            "description": "The URI path of the page. This is used in constructing the URL.",
+            "input": {
+                "placeholder": "about/contact"
+            }
         },
         {
             "handle": "meta_title",
