@@ -1,7 +1,7 @@
 {
-    "path": "me2.jpeg",
+    "path": "public\/me2.jpeg",
     "is_dir": false,
-    "disk": "public",
+    "disk": "local",
     "name": "me2.jpeg",
     "size": 214990,
     "mime_type": "image\/jpeg",

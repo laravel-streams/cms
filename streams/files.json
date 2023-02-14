@@ -10,11 +10,6 @@
     "routes": [
         {
             "handle": "view",
-            "uri": "files",
-            "view": "files"
-        },
-        {
-            "handle": "view",
             "uri": "files\/{id}",
             "view": "file"
         },
@@ -94,6 +89,10 @@
                     {
                         "heading": "Path",
                         "value": "path"
+                    },
+                    {
+                        "heading": "Disk",
+                        "value": "disk"
                     }
                 ],
                 "buttons": [
