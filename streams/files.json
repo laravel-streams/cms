@@ -75,10 +75,17 @@
         }
     ],
     "ui": {
-        "cp": {
-            "section": {
-                "handle": "files"
-            }
+        "admin": {
+            "navigation": [
+                {
+                    "sort_order": 6,
+                    "text": "Files",
+                    "url": "/admin/files",
+                    "component": "anchor",
+                    "buttons": [],
+                    "menu": []
+                }
+            ]
         },
         "tables": [
             {
@@ -91,20 +98,27 @@
                 ],
                 "buttons": [
                     {
-                        "handle": "edit"
+                        "tag": "a",
+                        "handle": "edit",
+                        "text": "Edit",
+                        "url": "/{request.segments.0}/{request.segments.1}/{entry.id}/edit"
                     },
                     {
+                        "tag": "a",
+                        "text": "Data",
                         "handle": "data",
+                        "url": "/files/{entry.id}",
                         "attributes": {
-                            "href": "/files/{entry.id}",
                             "target": "_blank",
                             "class": ["a-button", "-secondary"]
                         }
                     },
                     {
+                        "tag": "a",
+                        "text": "Render",
                         "handle": "render",
+                        "url": "/file/{entry.id}",
                         "attributes": {
-                            "href": "/file/{entry.id}",
                             "target": "_blank",
                             "class": ["a-button", "-secondary"]
                         }
@@ -119,16 +133,7 @@
         ],
         "forms": [
             {
-                "handle": "default",
-                "buttons": [
-                    {
-                        "handle": "cancel",
-                        "class": "-secondary",
-                        "attributes": {
-                            "href": "{cp.section.url}"
-                        }
-                    }
-                ]
+                "handle": "default"
             }
         ]
     }
