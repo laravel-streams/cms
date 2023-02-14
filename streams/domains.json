@@ -6,6 +6,16 @@
     },
     "fields": [
         {
+            "handle": "id",
+            "type": "slug",
+            "required": true,
+            "unique": true,
+            "input": {
+                "placeholder": "exmample-promo",
+                "slugify": "from"
+            }
+        },
+        {
             "handle": "from",
             "type": "string",
             "unique": true,
@@ -18,6 +28,7 @@
         {
             "handle": "status",
             "required": true,
+            "type": "enum",
             "config": {
                 "options": {
                     "301": "301 Permenant",
@@ -27,7 +38,62 @@
         },
         {
             "handle": "secure",
-            "type": "boolean"
+            "type": "boolean",
+            "input": {
+                "label": "Force a secure redirect."
+            }
         }
-    ]
+    ],
+    "ui": {
+        "admin": {
+            "navigation": [
+                {
+                    "sort_order": 6,
+                    "text": "Domains",
+                    "url": "/admin/domains",
+                    "component": "anchor"
+                }
+            ]
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "columns": [
+                    {
+                        "heading": "From",
+                        "value": "from"
+                    },
+                    {
+                        "heading": "To",
+                        "value": "to"
+                    },
+                    {
+                        "heading": "Status",
+                        "value": "status"
+                    },
+                    {
+                        "heading": "Secure",
+                        "value": "secure"
+                    }
+                ],
+                "buttons": [
+                    {
+                        "tag": "a",
+                        "handle": "edit",
+                        "text": "Edit",
+                        "url": "/{request.segments.0}/{request.segments.1}/{entry.id}/edit"
+                    },
+                    {
+                        "tag": "a",
+                        "handle": "test",
+                        "text": "Test",
+                        "url": "//{entry.from}",
+                        "attributes": {
+                            "target": "_blank"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 }

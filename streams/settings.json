@@ -16,7 +16,15 @@
         },
         {
             "handle": "values",
-            "type": "object"
+            "type": "object",
+            "config": {
+                "properties": [
+                    {
+                        "handle": "name",
+                        "type": "string"
+                    }
+                ]
+            }
         }
     ],
     "ui": {

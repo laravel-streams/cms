@@ -85,7 +85,8 @@
                 "handle": "default",
                 "columns": [
                     {
-                        "handle": "path"
+                        "heading": "Path",
+                        "value": "path"
                     }
                 ],
                 "buttons": [

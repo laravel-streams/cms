@@ -1,5 +1,5 @@
 {
-    "from": "redirect-me",
+    "from": "/redirect-me",
     "to": "contact",
     "status": "302",
     "secure": null

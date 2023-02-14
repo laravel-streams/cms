@@ -1,0 +1,6 @@
+{
+    "from": "test.localhost.local",
+    "to": "127.0.0.1",
+    "status": "302",
+    "secure": null
+}

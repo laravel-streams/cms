@@ -53,28 +53,46 @@
         }
     ],
     "ui": {
-        "cp": {
-            "section": {
-                "sort_order": 1,
-                "buttons": [{ "handle": "create" }]
-            }
+        "admin": {
+            "navigation": [
+                {
+                    "sort_order": 3,
+                    "text": "Pages",
+                    "url": "/admin/pages",
+                    "component": "anchor"
+                }
+            ]
         },
         "tables": [
             {
                 "handle": "default",
                 "columns": [
-                    { "handle": "title" },
-                    { "handle": "id" },
-                    { "handle": "path" }
+                    {
+                        "heading": "Title",
+                        "value": "title"
+                    },
+                    {
+                        "heading": "Id",
+                        "value": "id"
+                    },
+                    {
+                        "heading": "Path",
+                        "value": "path"
+                    }
                 ],
                 "buttons": [
                     {
-                        "handle": "edit"
+                        "tag": "a",
+                        "handle": "edit",
+                        "text": "Edit",
+                        "url": "/{request.segments.0}/{request.segments.1}/{entry.id}/edit"
                     },
                     {
+                        "tag": "a",
                         "handle": "view",
+                        "text": "View",
+                        "url": "/{entry.path}",
                         "attributes": {
-                            "href": "{entry.path}",
                             "target": "_blank"
                         }
                     }
@@ -86,9 +104,11 @@
                 "handle": "default",
                 "buttons": [
                     {
+                        "tag": "a",
+                        "text": "View",
                         "handle": "view",
+                        "url": "./view",
                         "attributes": {
-                            "href": "{entry.path}",
                             "target": "_blank"
                         }
                     }

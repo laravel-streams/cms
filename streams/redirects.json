@@ -35,8 +35,8 @@
         },
         {
             "handle": "status",
-            "type": "enum",
             "required": true,
+            "type": "enum",
             "config": {
                 "options": {
                     "301": "301 Permenant",
@@ -46,19 +46,22 @@
         },
         {
             "handle": "secure",
-            "type": "boolean"
+            "type": "boolean",
+            "input": {
+                "label": "Force a secure redirect."
+            }
         }
     ],
     "ui": {
-        "cp": {
-            "section": {
-                "sort_order": 3,
-                "buttons": [
-                    {
-                        "handle": "create"
-                    }
-                ]
-            }
+        "admin": {
+            "navigation": [
+                {
+                    "sort_order": 4,
+                    "text": "Redirects",
+                    "url": "/admin/redirects",
+                    "component": "anchor"
+                }
+            ]
         },
         "tables": [
             {
@@ -74,57 +77,36 @@
                 ],
                 "columns": [
                     {
-                        "handle": "from"
+                        "heading": "From",
+                        "value": "from"
                     },
                     {
-                        "handle": "to"
+                        "heading": "To",
+                        "value": "to"
                     },
                     {
-                        "handle": "status"
+                        "heading": "Status",
+                        "value": "status"
                     }
                 ],
                 "buttons": [
                     {
-                        "handle": "edit"
+                        "tag": "a",
+                        "handle": "edit",
+                        "text": "Edit",
+                        "url": "/{request.segments.0}/{request.segments.1}/{entry.id}/edit"
                     },
                     {
+                        "tag": "a",
                         "handle": "test",
+                        "text": "Test",
+                        "url": "{entry.from}",
                         "attributes": {
-                            "target": "_blank",
-                            "href": "{entry.from}"
-                        }
-                    }
-                ]
-            }
-        ],
-        "forms": [
-            {
-                "handle": "default",
-                "buttons": [
-                    {
-                        "handle": "cancel",
-                        "attributes": {
-                            "href": "{cp.section}"
+                            "target": "_blank"
                         }
                     }
                 ]
             }
         ]
-    },
-    "data": [
-        {
-            "id": "d8454301-814a-4bf4-b667-b70d3823d520",
-            "from": "old-path",
-            "to": "new-path",
-            "status": "302",
-            "secure": null
-        },
-        {
-            "id": "33c52a31-49a5-4bf4-4798-92ed3023d2aa",
-            "from": "/",
-            "to": "about",
-            "status": "301",
-            "secure": null
-        }
-    ]
+    }
 }
