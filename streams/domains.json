@@ -53,27 +53,41 @@
                     "url": "/admin/domains",
                     "component": "anchor"
                 }
+            ],
+            "actions": [
+                {
+                    "handle": "index"
+                },
+                {
+                    "handle": "create"
+                },
+                {
+                    "handle": "edit"
+                }
             ]
         },
-        "tables": [
+        "components": [
             {
+                "component": "table",
                 "handle": "default",
                 "columns": [
                     {
-                        "heading": "From",
+                        "header": {
+                            "text": "From"
+                        },
                         "value": "from"
                     },
                     {
-                        "heading": "To",
+                        "header": {
+                            "text": "To"
+                        },
                         "value": "to"
                     },
                     {
-                        "heading": "Status",
+                        "header": {
+                            "text": "Status"
+                        },
                         "value": "status"
-                    },
-                    {
-                        "heading": "Secure",
-                        "value": "secure"
                     }
                 ],
                 "buttons": [

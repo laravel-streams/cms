@@ -63,9 +63,11 @@
                 }
             ]
         },
-        "tables": [
+        "components": [
             {
+                "component": "table",
                 "handle": "default",
+                "selectable": true,
                 "filters": [
                     {
                         "handle": "search",
@@ -77,16 +79,22 @@
                 ],
                 "columns": [
                     {
-                        "heading": "From",
-                        "value": "from"
+                        "value": "from",
+                        "header": {
+                            "text": "From"
+                        }
                     },
                     {
-                        "heading": "To",
-                        "value": "to"
+                        "value": "to",
+                        "header": {
+                            "text": "To"
+                        }
                     },
                     {
-                        "heading": "Status",
-                        "value": "status"
+                        "value": "status",
+                        "header": {
+                            "text": "Status"
+                        }
                     }
                 ],
                 "buttons": [

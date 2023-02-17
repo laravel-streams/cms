@@ -62,10 +62,7 @@
         },
         {
             "handle": "body",
-            "type": "string",
-            "input": {
-                "type": "editor"
-            }
+            "type": "markdown"
         }
     ],
     "ui": {
@@ -79,17 +76,28 @@
                 }
             ]
         },
-        "tables": [
+        "components": [
             {
+                "component": "table",
                 "handle": "default",
                 "columns": [
                     {
-                        "heading": "Title",
-                        "value": "title"
+                        "value": "title",
+                        "header": {
+                            "text": "Title"
+                        }
                     },
                     {
-                        "heading": "Id",
-                        "value": "id"
+                        "value": "id",
+                        "header": {
+                            "text": "Id"
+                        }
+                    },
+                    {
+                        "value": "{entry.publish_at}",
+                        "header": {
+                            "text": "Publish Date"
+                        }
                     }
                 ],
                 "buttons": [
@@ -109,10 +117,9 @@
                         }
                     }
                 ]
-            }
-        ],
-        "forms": [
+            },
             {
+                "component": "form",
                 "handle": "default",
                 "buttons": [
                     {
