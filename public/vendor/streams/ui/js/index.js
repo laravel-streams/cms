@@ -130,23 +130,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./resources/scss/tailwind.scss":
-/*!**************************************!*\
-  !*** ./resources/scss/tailwind.scss ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy90YWlsd2luZC5zY3NzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL3N0cmVhbXMudWkvLi9yZXNvdXJjZXMvc2Nzcy90YWlsd2luZC5zY3NzP2VhZWQiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/scss/tailwind.scss\n");
-
-/***/ }),
-
 /***/ "./resources/scss/theme.scss":
 /*!***********************************!*\
   !*** ./resources/scss/theme.scss ***!
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy90aGVtZS5zY3NzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL3N0cmVhbXMudWkvLi9yZXNvdXJjZXMvc2Nzcy90aGVtZS5zY3NzPzA4ZGUiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/scss/theme.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy90aGVtZS5zY3NzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL3N0cmVhbXMudWkvLi9yZXNvdXJjZXMvc2Nzcy90aGVtZS5zY3NzPzhkN2EiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/scss/theme.scss\n");
 
 /***/ }),
 
@@ -260,7 +250,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		var installedChunks = {
 /******/ 			"/resources/public/js/index": 0,
 /******/ 			"resources/public/css/theme": 0,
-/******/ 			"resources/public/css/tailwind": 0,
 /******/ 			"resources/public/css/variables": 0
 /******/ 		};
 /******/ 		
@@ -311,10 +300,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["resources/public/css/theme","resources/public/css/tailwind","resources/public/css/variables"], () => (__webpack_require__("./resources/lib/index.js")))
-/******/ 	__webpack_require__.O(undefined, ["resources/public/css/theme","resources/public/css/tailwind","resources/public/css/variables"], () => (__webpack_require__("./resources/scss/variables.scss")))
-/******/ 	__webpack_require__.O(undefined, ["resources/public/css/theme","resources/public/css/tailwind","resources/public/css/variables"], () => (__webpack_require__("./resources/scss/tailwind.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["resources/public/css/theme","resources/public/css/tailwind","resources/public/css/variables"], () => (__webpack_require__("./resources/scss/theme.scss")))
+/******/ 	__webpack_require__.O(undefined, ["resources/public/css/theme","resources/public/css/variables"], () => (__webpack_require__("./resources/lib/index.js")))
+/******/ 	__webpack_require__.O(undefined, ["resources/public/css/theme","resources/public/css/variables"], () => (__webpack_require__("./resources/scss/variables.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["resources/public/css/theme","resources/public/css/variables"], () => (__webpack_require__("./resources/scss/theme.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	(window.streams = window.streams || {}).ui = __webpack_exports__;
 /******/ 	

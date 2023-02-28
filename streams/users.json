@@ -2,8 +2,7 @@
     "config": {
         "source": {
             "type": "self"
-        },
-        "abstract": "App\\Models\\User"
+        }
     },
     "fields": [
         {
@@ -61,33 +60,43 @@
         }
     ],
     "ui": {
-        "tables": [
+        "components": [
             {
+                "component": "table",
                 "handle": "default",
                 "columns": [
                     {
-                        "handle": "display_name"
+                        "value": "display_name",
+                        "header": {
+                            "text": "Display Name"
+                        }
                     },
                     {
-                        "handle": "email"
+                        "value": "email",
+                        "header": {
+                            "text": "Email"
+                        }
                     }
                 ],
                 "buttons": [
                     {
-                        "handle": "edit"
+                        "tag": "a",
+                        "handle": "edit",
+                        "text": "Edit",
+                        "url": "/{request.segments.0}/{request.segments.1}/{entry.id}/edit"
                     }
                 ]
             }
         ],
-        "cp": {
-            "section": {
-                "sort_order": 2,
-                "buttons": [
-                    {
-                        "handle": "create"
-                    }
-                ]
-            }
+        "admin": {
+            "navigation": [
+                {
+                    "sort_order": 3,
+                    "text": "Users",
+                    "url": "/admin/users",
+                    "component": "anchor"
+                }
+            ]
         }
     },
     "data": {

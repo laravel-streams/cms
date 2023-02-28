@@ -111,14 +111,32 @@
             {
                 "component": "form",
                 "handle": "default",
-                "buttons": [
+                "stream": "pages",
+                "fields": [
                     {
-                        "tag": "a",
-                        "text": "View",
-                        "handle": "view",
-                        "url": "{entry.path}",
-                        "attributes": {
-                            "target": "_blank"
+                        "field": "id",
+                        "width": "1/3"
+                    },
+                    {
+                        "field": "path",
+                        "width": "1/3"
+                    },
+                    {
+                        "field": "title",
+                        "width": "1/3"
+                    },
+                    {
+                        "field": "meta_title",
+                        "width": "auto"
+                    },
+                    {
+                        "field": "meta_description",
+                        "width": "auto"
+                    },
+                    {
+                        "field": "body",
+                        "input": {
+                            "type": "editor"
                         }
                     }
                 ]

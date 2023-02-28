@@ -70,6 +70,7 @@
             {
                 "component": "table",
                 "handle": "default",
+                "selectable": true,
                 "columns": [
                     {
                         "header": {

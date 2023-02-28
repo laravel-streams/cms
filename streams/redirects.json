@@ -56,7 +56,7 @@
         "admin": {
             "navigation": [
                 {
-                    "sort_order": 4,
+                    "sort_order": 6,
                     "text": "Redirects",
                     "url": "/admin/redirects",
                     "component": "anchor"
