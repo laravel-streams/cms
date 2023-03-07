@@ -6,3 +6,20 @@ meta_description: null
 ---
 
 <p>Hello, world!</p>
+
+@ui('dropdown', [
+    'toggle' => [
+        'component' => 'avatar',
+        'src' => 'ryan@pyrocms.com',
+        'attributes' => [
+            'class' => 'rounded-full',
+        ],
+    ],
+    'content' => [
+        [
+            'url' => '/admin/profile',
+            'component' => 'anchor',
+            'text' => 'Profile',
+        ],
+    ],
+])
