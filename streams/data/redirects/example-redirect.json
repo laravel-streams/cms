@@ -1,0 +1,5 @@
+{
+    "from": "\/example",
+    "to": "\/?example",
+    "status": "302"
+}

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Streams\Ui\Support\Facades\UI;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        UI::component('contact-form', \App\Components\ContactForm::class);
     }
 }

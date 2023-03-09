@@ -56,7 +56,7 @@
                 ],
                 "buttons": [
                     {
-                        "handle": "edit"
+                        "button": "button.edit"
                     },
                     {
                         "handle": "view",
@@ -64,6 +64,13 @@
                             "target": "_blank",
                             "href": "{entry.url}"
                         }
+                    }
+                ],
+                "actions": [
+                    {
+                        "handle": "delete",
+                        "text": "Delete",
+                        "type": "delete"
                     }
                 ]
             }

@@ -119,6 +119,13 @@
                         }
                     }
                 ],
+                "actions": [
+                    {
+                        "handle": "delete",
+                        "text": "Delete",
+                        "type": "delete"
+                    }
+                ],
                 "config": {
                     "order_by": [
                         ["path", "asc"]

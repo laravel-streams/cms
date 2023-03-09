@@ -107,6 +107,13 @@
                             "target": "_blank"
                         }
                     }
+                ],
+                "actions": [
+                    {
+                        "handle": "delete",
+                        "text": "Delete",
+                        "type": "delete"
+                    }
                 ]
             }
         ]

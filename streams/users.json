@@ -64,6 +64,7 @@
             {
                 "component": "table",
                 "handle": "default",
+                "selectable": true,
                 "columns": [
                     {
                         "value": "display_name",
@@ -83,7 +84,14 @@
                         "tag": "a",
                         "handle": "edit",
                         "text": "Edit",
-                        "url": "/{request.segments.0}/{request.segments.1}/{entry.id}/edit"
+                        "url": "\/{request.segments.0}\/{request.segments.1}\/{entry.id}\/edit"
+                    }
+                ],
+                "actions": [
+                    {
+                        "handle": "delete",
+                        "text": "Delete",
+                        "type": "delete"
                     }
                 ]
             }
@@ -93,7 +101,7 @@
                 {
                     "sort_order": 3,
                     "text": "Users",
-                    "url": "/admin/users",
+                    "url": "\/admin\/users",
                     "component": "anchor"
                 }
             ]
@@ -105,6 +113,19 @@
             "email": "ryan@pyrocms.com",
             "display_name": "Ryan Thompson",
             "password": "$2y$10$Br7ee8ZoLlI8PJkmb6kPyepFY3yUdla6MIa8If\/nHvjjD116byudG",
+            "activated": true,
+            "enabled": true,
+            "last_login_at": null,
+            "remember_token": null,
+            "activation_code": null,
+            "reset_code": null,
+            "ip_address": null
+        },
+        "353465b1-9906-4471-8036-b38e9f355e1a": {
+            "id": "353465b1-9906-4471-8036-b38e9f355e1a",
+            "email": "test@pyrocms.dev",
+            "password": "$2y$10$kBM\/oHW85qDBfmTnXRTmQuDAQM4TllTLNSlxzGEApDwGJeqww8Vgy",
+            "display_name": "Testing User",
             "activated": true,
             "enabled": true,
             "last_login_at": null,

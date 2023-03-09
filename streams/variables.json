@@ -63,6 +63,13 @@
                         "handle": "edit",
                         "text": "Manage"
                     }
+                ],
+                "actions": [
+                    {
+                        "handle": "delete",
+                        "text": "Delete",
+                        "type": "delete"
+                    }
                 ]
             }
         ],

@@ -92,10 +92,7 @@
                 ],
                 "buttons": [
                     {
-                        "tag": "a",
-                        "handle": "edit",
-                        "text": "Edit",
-                        "url": "/{request.segments.0}/{request.segments.1}/{entry.id}/edit"
+                        "button": "button.edit"
                     },
                     {
                         "tag": "a",
@@ -105,6 +102,13 @@
                         "attributes": {
                             "target": "_blank"
                         }
+                    }
+                ],
+                "actions": [
+                    {
+                        "handle": "delete",
+                        "text": "Delete",
+                        "type": "delete"
                     }
                 ]
             },
