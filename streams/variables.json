@@ -33,7 +33,10 @@
         },
         {
             "handle": "footer",
-            "type": "markdown"
+            "type": "string",
+            "input": {
+                "type": "markdown"
+            }
         },
         {
             "handle": "phone",

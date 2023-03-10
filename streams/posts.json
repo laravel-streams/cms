@@ -62,7 +62,10 @@
         },
         {
             "handle": "body",
-            "type": "markdown"
+            "type": "string",
+            "input": {
+                "type": "markdown"
+            }
         }
     ],
     "ui": {
